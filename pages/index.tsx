@@ -1,17 +1,27 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
+import { withTranslation } from "../i18n";
 
-export default () => (
+const HomePage = ({ t }: any) => (
   <ul>
+    {t("title")}
     <li>
-      <Link href="/a" as="/a">
+      <Link href="/en/a" as="/en/a">
         <a>a</a>
       </Link>
     </li>
     <li>
-      <Link href="/b" as="/b">
+      <Link href="/pt/b" as="/pt/b">
         <a>b</a>
       </Link>
     </li>
   </ul>
-)
+);
+
+HomePage.getInitialProps = () => {
+  return {
+    namespacesRequired: ["common"]
+  };
+};
+
+export default withTranslation("common")(HomePage);
