@@ -6,12 +6,12 @@ const HomePage = ({ t }: any) => (
   <ul>
     {t("title")}
     <li>
-      <Link href="/en/a" as="/en/a">
+      <Link href="/a" as="/a">
         <a>a</a>
       </Link>
     </li>
     <li>
-      <Link href="/pt/b" as="/pt/b">
+      <Link href="/b" as="/b">
         <a>b</a>
       </Link>
     </li>
