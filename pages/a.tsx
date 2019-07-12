@@ -1,24 +1,26 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // This is our initialised `NextI18Next` instance
-import { withTranslation } from "../i18n";
+import { withTranslation } from '../i18n';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 class APage extends Component<any, any> {
-  static async getInitialProps() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  public static async getInitialProps(): Promise<any> {
     return {
-      namespacesRequired: ["common"]
+      namespacesRequired: ['common'],
     };
   }
 
-  render() {
+  public render(): JSX.Element {
     const { t } = this.props;
     return (
       <div>
-        <p>currentLanguage: {t("title")}</p>
+        <p>currentLanguage: {t('title')}</p>
       </div>
     );
   }
 }
 
-export default withTranslation("common")(APage);
+export default withTranslation('common')(APage);
 
 // export default () => <div>a</div>;

@@ -1,1 +1,7 @@
 **/*.js
+**/*.md
+yarn.lock
+**/*.log
+**/*.js
+**/*.json
+dist/**/**

@@ -10,6 +10,12 @@
     "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
   "globals": {},
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -17,6 +23,7 @@
   },
   "plugins": ["import", "jest"],
   "rules": {
-    "@typescript-eslint/indent": "off"
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/interface-name-prefix": ["error", "always"]
   }
 }
