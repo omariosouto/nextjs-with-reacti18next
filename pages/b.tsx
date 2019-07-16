@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const B = (): JSX.Element => <div>b</div>;
+const B = (): JSX.Element => <div>b</div>;
+
+export default B;
